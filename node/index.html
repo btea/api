@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>upload file</title>
+</head>
+
+<body>
+    <input type="file" class="addFile" />
+    <script>
+        let el = document.getElementsByClassName('addFile')[0];
+        el.addEventListener('change', addFile)
+
+        function startRequest(params) {
+            let xhr = new XMLHttpRequest();
+            xhr.open('post', 'https://btea.site/fileApi/upload');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    console.log(xhr.response)
+                }
+            }
+            xhr.send(params);
+        }
+        function addFile(e) {
+            let file = e.target.files[0];
+            let formdata = new FormData();
+            formdata.append('file', file);
+            startRequest(formdata);
+        }
+
+    </script>
+</body>
+
+</html>
