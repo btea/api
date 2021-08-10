@@ -1,4 +1,4 @@
-### api 说明文档
+### 上传文件 api 说明文档
 
 > 线上部署 https://btea.site/fileApi
 
@@ -21,3 +21,8 @@ _参数_: `fileName` => `/images/c.jpg`
 `/files/`  
 _method_: `get`  
 _参数_: `fileName` => `/files/a.txt`
+
+### 网易云相关接口 说明文档
+
+> 线上部署公共前缀 https://btea.site/music  
+> [网易云音乐 Api](https://neteasecloudmusicapi.vercel.app/#/?id=neteasecloudmusicapi)
