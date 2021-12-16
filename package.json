@@ -19,6 +19,6 @@
     },
     "homepage": "https://github.com/btea/api#readme",
     "devDependencies": {
-        "vuepress": "^1.8.2"
+        "vuepress": "1.8.2"
     }
 }
